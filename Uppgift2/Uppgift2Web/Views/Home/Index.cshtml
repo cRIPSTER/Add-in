@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+    <div class="jumbotron">
+        <h2>Welcome @ViewBag.UserName!</h2>
+        <h3>@ViewBag.WebTitle</h3>
+        <h3>@ViewBag.MyList</h3>
+
+        <ul>
+            @foreach (var item in ViewBag.ItemTitle)
+            {
+                <li>@item</li>
+            }
+        </ul>
+        <ul>
+            @foreach (var item in ViewBag.ListTitles)
+            {
+                <li>@item</li>
+            }
+        </ul>
+
+        <h3>
+            Ej startade ärenden med hög prioritet: @ViewBag.Counter2
+        </h3>
+        <h3> Aktiva ärenden med medel eller låg prioritet: @ViewBag.Counter3</h3>
+    </div>
